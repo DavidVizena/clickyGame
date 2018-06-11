@@ -1,0 +1,119 @@
+.App {
+    text-align: center;
+    min-height: 100%;
+    position: relative;
+}
+
+.App-logo {
+    /*animates logo, reference keyframes*/
+    animation: App-logo-spin infinite 20s linear;
+    height: 80px;
+    border-radius: 50%;
+}
+
+.App-header {
+    background-color: #9a0e27;
+    height: 250px;
+    padding: 20px;
+    color: #fff;
+    text-align: center;
+}
+
+.App-title {
+    font-size: 1.5em;
+}
+
+.App-intro {
+    font-weight: bold;
+    font-size: 17pt;
+}
+
+.App-score {
+    background-color: #fff;
+    color: #000;
+    border-radius: 2px;
+    margin: 0 30vw 0 30vw;
+    padding: 5px;
+    font-size: 20pt;
+}
+
+.App-footer {
+    background-color: #9a0e27;
+    height: 20px;
+    padding: 10px;
+    color: #fff;
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+.grid {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 2em 20em 65px 20em;
+    min-height: 100%;
+}
+
+.tile {
+    width: 10em;
+    padding: 1em;
+    height: 10em;
+    overflow: hidden;
+    border-radius: 10%;
+}
+
+.tile-img {
+    width: 100%;
+    height: 100%;
+    border-radius: 10%;
+}
+
+/*image in tile expands on hover*/
+
+.tile:hover img {
+    transform: scale(1.25);
+}
+
+/*animates logo*/
+
+@keyframes App-logo-spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* media queries for screen-size relative styling*/
+
+@media (max-width: 1800px) {
+    .grid {
+        margin: 2em 15em 65px 15em;
+    }
+}
+
+@media (max-width: 1300px) {
+    .grid {
+        margin: 2em 5em 65px 5em;
+    }
+}
+
+@media (max-width: 800px) {
+    .grid {
+        margin: 1em 1em 65px 1em;
+    }
+    .tile {
+        width: 6em;
+        height: 6em;
+        padding: 5px;
+    }
+    .App-intro {
+        font-size: 14pt;
+    }
+    .App-score {
+        margin: 0 20vw 0 20vw;
+    }
+}
